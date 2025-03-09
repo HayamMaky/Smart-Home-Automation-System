@@ -1,0 +1,16 @@
+/*
+ * led.c
+ *
+ *  Created on: Oct 8, 2024
+ *      Author: Hayam
+ */
+#include"led.h"
+#include"gpio.h"
+#include"std_types.h"
+
+void LEDS_init(void)
+{
+	/*Initializes all Leds (red, green, blue) pins direction. */
+	GPIO_setupPinDirection(RED_LED_PORT_ID, RED_LED_PIN_ID, PIN_OUTPUT);
+	/*Turn off all the Leds*/
+}

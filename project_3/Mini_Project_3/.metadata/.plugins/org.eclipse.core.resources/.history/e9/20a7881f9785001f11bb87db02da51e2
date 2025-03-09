@@ -1,0 +1,9 @@
+/*
+ * dc_motor.c
+ *
+ *  Created on: Oct 8, 2024
+ *      Author: Hayam
+ */
+
+#include "dc_motor.h"
+

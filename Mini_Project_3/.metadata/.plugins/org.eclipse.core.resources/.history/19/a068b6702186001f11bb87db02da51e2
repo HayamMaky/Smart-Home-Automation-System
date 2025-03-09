@@ -1,0 +1,26 @@
+/*
+ * app.c
+ *
+ *  Created on: Oct 9, 2024
+ *      Author: Hayam
+ */
+#include"adc.h"
+#include"buzzer.h"
+#include"dc_motor.h"
+#include"flame_sensor.h"
+#include"lcd.h"
+#include"ldr_sensor.h"
+#include"led.h"
+#include"lm35_sensor.h"
+#include"pwm_timer0.h"
+/*******************************************************/
+
+int main(void)
+{
+
+	while(1)
+	{
+
+	}
+}
+

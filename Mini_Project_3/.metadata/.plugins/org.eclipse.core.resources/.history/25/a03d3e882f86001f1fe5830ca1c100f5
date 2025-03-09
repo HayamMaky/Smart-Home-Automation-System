@@ -1,0 +1,23 @@
+app.o app.o: ../app.c ../adc.h ../std_types.h ../buzzer.h ../dc_motor.h \
+  ../flame_sensor.h ../lcd.h ../ldr_sensor.h ../led.h ../lm35_sensor.h \
+  ../pwm_timer0.h
+
+../adc.h:
+
+../std_types.h:
+
+../buzzer.h:
+
+../dc_motor.h:
+
+../flame_sensor.h:
+
+../lcd.h:
+
+../ldr_sensor.h:
+
+../led.h:
+
+../lm35_sensor.h:
+
+../pwm_timer0.h:

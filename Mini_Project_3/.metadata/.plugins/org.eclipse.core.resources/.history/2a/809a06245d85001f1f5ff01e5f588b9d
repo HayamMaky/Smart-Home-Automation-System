@@ -1,0 +1,13 @@
+/*
+ * ldr_sensor.c
+ *
+ *  Created on: Oct 7, 2024
+ *      Author: Hayam
+ */
+#include "ldr_sensor.h"
+#include "adc.h"
+
+uint16 LDR_getLightIntensity(void)
+{
+
+}

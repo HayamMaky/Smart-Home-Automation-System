@@ -1,0 +1,60 @@
+/*
+ * app.c
+ *
+ *  Created on: Oct 9, 2024
+ *      Author: Hayam
+ */
+#include"adc.h"
+#include"buzzer.h"
+#include"dc_motor.h"
+#include"flame_sensor.h"
+#include"lcd.h"
+#include"ldr_sensor.h"
+#include"led.h"
+#include"lm35_sensor.h"
+#include"pwm_timer0.h"
+/*******************************************************/
+
+int main(void)
+{
+
+	LEDS_init();
+	ADC_init();
+	while(1)
+	{
+		 /*  Automatic Lighting Control
+		  *  Based on the LDR readings, the system controls three LEDs
+          *  according to light intensity thresholds:
+          *  1-Intensity < 15%: All 3 LEDs (Red, Green, and Blue) turn ON.
+          *  2-Intensity 16–50%: Red and Green LEDs turn ON.
+          *  3-Intensity 51–70%: Only the Red LED turns ON.
+          *  4-Intensity > 70%: All LEDs are turned OFF.
+		  */
+		if((LDR_getLightIntensity())<=15)
+		{
+			LED_on(RED);
+			LED_on(GREEN);
+			LED_on(BLUE);
+		}
+		else if((LDR_getLightIntensity())<=50)
+		{
+			LED_on(RED);
+			LED_on(GREEN);
+			LED_off(BLUE);
+		}
+		else if((LDR_getLightIntensity())<=70)
+		{
+			LED_on(RED);
+			LED_off(GREEN);
+			LED_off(BLUE);
+		}
+		else
+		{
+			LED_off(RED);
+			LED_off(GREEN);
+			LED_off(BLUE);
+		}
+
+	}
+}
+

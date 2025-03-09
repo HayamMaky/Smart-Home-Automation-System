@@ -1,0 +1,23 @@
+/*
+ * flame_sensor.c
+ *
+ *  Created on: Oct 8, 2024
+ *      Author: Hayam
+ */
+#include"flame_sensor.h"
+#include"std_types.h"
+
+/*Initializes the flame sensor pin direction.*/
+void FlameSensor_init(void)
+{
+	GPIO_setupPinDirection(FLAME_SENSOR_PORT_ID, FLAME_SENSOR_PIN_ID, PIN_INPUT);
+}
+
+/*Reads the value from the flame sensor and returns it.*/
+uint8 FlameSensor_getValue(void)
+{
+
+}
+
+
+

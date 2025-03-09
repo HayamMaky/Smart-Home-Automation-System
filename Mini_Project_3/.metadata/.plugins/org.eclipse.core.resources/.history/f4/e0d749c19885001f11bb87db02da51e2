@@ -1,0 +1,34 @@
+/*
+ * dc_motor.c
+ *
+ *  Created on: Oct 8, 2024
+ *      Author: Hayam
+ */
+
+#include "dc_motor.h"
+#include "gpio.h"
+#include "std_types.h"
+
+
+/* Initializes the DC motor by setting the direction for the motor pins and stopping the
+motor at the beginning.*/
+void DcMotor_Init(void)
+{
+	/*setting the direction for the motor pins*/
+	GPIO_setupPinDirection(MOTOR_IN1_PORT_ID, MOTOR_IN1_PIN_ID, PIN_OUTPUT);
+	GPIO_setupPinDirection(MOTOR_IN1_PORT_ID, MOTOR_IN2_PIN_ID, PIN_OUTPUT);
+
+	/*stopping the motor at the beginning*/
+	GPIO_writePin(MOTOR_IN1_PORT_ID, MOTOR_IN1_PIN_ID, LOGIC_LOW);
+	GPIO_writePin(MOTOR_IN1_PORT_ID, MOTOR_IN2_PIN_ID, LOGIC_LOW);
+}
+
+/*Controls the motor's state (Clockwise/Anti-Clockwise/Stop) and adjusts the speed based
+on the input duty cycle. */
+void DcMotor_Rotate(DcMotor_State state, uint8 speed)
+{
+	switch(state)
+	case CW:
+
+}
+
